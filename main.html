@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izhaan Ali - Personal Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-gray-800">Izhaan Ali</h1>
+                <div class="flex gap-6">
+                    <a href="#home" class="text-gray-600 hover:text-gray-900 transition">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-gray-900 transition">About</a>
+                    <a href="#experience" class="text-gray-600 hover:text-gray-900 transition">Experience</a>
+                    <a href="#projects" class="text-gray-600 hover:text-gray-900 transition">Projects</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-900 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center">
+                <!-- Profile Picture Placeholder -->
+                <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-gray-200 border-4 border-gray-300 flex items-center justify-center overflow-hidden">
+                    <svg class="text-gray-400" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Hi, I'm Izhaan Ali</h2>
+                <p class="text-xl text-gray-600 mb-8">Mathematics Student at University of Waterloo</p>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+                    First-year student passionate about software engineering and problem-solving. 
+                    Building my skills in programming and seeking opportunities to grow as a developer.
+                </p>
+                <div class="flex gap-4 justify-center">
+                    <a href="#contact" class="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition">
+                        Get in Touch
+                    </a>
+                    <a href="#projects" class="border-2 border-gray-900 text-gray-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition">
+                        View Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center gap-3 mb-8">
+                <svg class="text-gray-900" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <h3 class="text-3xl font-bold text-gray-900">About Me</h3>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-4">Education</h4>
+                    <div class="mb-6">
+                        <p class="font-semibold text-gray-900">University of Waterloo</p>
+                        <p class="text-gray-600">Bachelor of Mathematics</p>
+                        <p class="text-gray-500 text-sm">First Year, First Term | September 2025 - Present</p>
+                        <p class="text-gray-700 mt-2">Currently taking CS115, developing strong foundations in programming and problem-solving.</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-4">Skills</h4>
+                    <div class="space-y-3">
+                        <div>
+                            <p class="font-semibold text-gray-900">Programming Languages</p>
+                            <p class="text-gray-700">JavaScript, Racket</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Tools & Platforms</p>
+                            <p class="text-gray-700">Adobe Animate, DrRacket</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Core Competencies</p>
+                            <p class="text-gray-700">Problem-solving, Mathematical thinking, Leadership</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center gap-3 mb-8">
+                <svg class="text-gray-900" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+                <h3 class="text-3xl font-bold text-gray-900">Experience</h3>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
+                <div class="flex justify-between items-start mb-3">
+                    <div>
+                        <h4 class="text-xl font-semibold text-gray-900">Supervisor</h4>
+                        <p class="text-gray-700">Harvey's</p>
+                    </div>
+                </div>
+                <p class="text-gray-700">
+                    Developed leadership and team management skills while overseeing daily operations and ensuring quality service delivery.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center gap-3 mb-8">
+                <svg class="text-gray-900" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <h3 class="text-3xl font-bold text-gray-900">Projects</h3>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-12 text-center border-2 border-dashed border-gray-300">
+                <svg class="mx-auto mb-4 text-gray-400" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                <p class="text-gray-600 text-lg mb-2">Projects Coming Soon!</p>
+                <p class="text-gray-500">Currently working on my first project. Check back soon to see what I'm building.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h3>
+                <p class="text-gray-600 text-lg">
+                    I'm always open to discussing new opportunities, projects, or collaborations.
+                </p>
+            </div>
+            <div class="flex justify-center gap-8 flex-wrap">
+                <a href="mailto:Izhaanali974@gmail.com" class="flex items-center gap-3 bg-white px-6 py-4 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <svg class="text-gray-900" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <div class="text-left">
+                        <p class="text-sm text-gray-500">Email</p>
+                        <p class="text-gray-900 font-semibold">Izhaanali974@gmail.com</p>
+                    </div>
+                </a>
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-white px-6 py-4 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <svg class="text-gray-900" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <div class="text-left">
+                        <p class="text-sm text-gray-500">GitHub</p>
+                        <p class="text-gray-900 font-semibold">View Profile</p>
+                    </div>
+                </a>
+            </div>
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-4">Download my resume (PDF coming soon)</p>
+                <button class="border-2 border-gray-300 text-gray-600 px-6 py-2 rounded-lg cursor-not-allowed opacity-50">
+                    Resume PDF (Coming Soon)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <p>© 2024 Izhaan Ali. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
