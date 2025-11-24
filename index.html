@@ -10,6 +10,87 @@
         html {
             scroll-behavior: smooth;
         }
+        
+        /* Fade in animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        /* Hover animations */
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Profile picture hover */
+        .profile-pic {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .profile-pic:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Button animations */
+        .btn-animate {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-animate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Nav link animation */
+        nav a {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: #111827;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        /* Section slide-in animation */
+        section {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        section:nth-child(1) { animation-delay: 0.1s; }
+        section:nth-child(2) { animation-delay: 0.2s; }
+        section:nth-child(3) { animation-delay: 0.3s; }
+        section:nth-child(4) { animation-delay: 0.4s; }
+        section:nth-child(5) { animation-delay: 0.5s; }
+        section:nth-child(6) { animation-delay: 0.6s; }
     </style>
 </head>
 <body class="min-h-screen bg-gray-50">
@@ -34,7 +115,7 @@
         <div class="max-w-6xl mx-auto">
             <div class="text-center">
                 <!-- Profile Picture Placeholder -->
-                <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-gray-200 border-4 border-gray-300 flex items-center justify-center overflow-hidden">
+                <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-gray-200 border-4 border-gray-300 flex items-center justify-center overflow-hidden profile-pic">
                     <svg class="text-gray-400" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                         <circle cx="12" cy="7" r="4"></circle>
@@ -47,10 +128,10 @@
                     Building my skills in programming and seeking opportunities to grow as a developer.
                 </p>
                 <div class="flex gap-4 justify-center">
-                    <a href="#contact" class="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition">
+                    <a href="#contact" class="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition btn-animate">
                         Get in Touch
                     </a>
-                    <a href="#projects" class="border-2 border-gray-900 text-gray-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition">
+                    <a href="#projects" class="border-2 border-gray-900 text-gray-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition btn-animate">
                         View Projects
                     </a>
                 </div>
@@ -68,6 +149,20 @@
                 </svg>
                 <h3 class="text-3xl font-bold text-gray-900">About Me</h3>
             </div>
+            
+            <!-- Personal Statement -->
+            <div class="mb-12 bg-gray-50 p-6 rounded-lg border-l-4 border-gray-900">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    I'm passionate about the intersection of mathematics and technology. What excites me most about software engineering is the ability to solve real-world problems through elegant code and logical thinking. I love the challenge of breaking down complex problems into manageable pieces and building solutions from the ground up.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    I chose the University of Waterloo for its world-renowned co-op program and strong emphasis on both theoretical foundations and practical application. Pursuing Mathematics allows me to develop the analytical reasoning and problem-solving skills that are fundamental to creating efficient, scalable software. The rigorous curriculum perfectly complements my goal of becoming a well-rounded software engineer who can tackle challenging technical problems.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    My goal is to build a career where I can contribute to innovative projects that make a meaningful impact. I'm particularly interested in developing clean, efficient code and continuously learning new technologies to stay at the forefront of the field.
+                </p>
+            </div>
+
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
                     <h4 class="text-xl font-semibold text-gray-900 mb-4">Education</h4>
@@ -109,7 +204,7 @@
                 </svg>
                 <h3 class="text-3xl font-bold text-gray-900">Experience</h3>
             </div>
-            <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
+            <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-200 hover-lift">
                 <div class="flex justify-between items-start mb-3">
                     <div>
                         <h4 class="text-xl font-semibold text-gray-900">Supervisor</h4>
@@ -153,7 +248,7 @@
                 </p>
             </div>
             <div class="flex justify-center gap-8 flex-wrap">
-                <a href="mailto:Izhaanali974@gmail.com" class="flex items-center gap-3 bg-white px-6 py-4 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition">
+                <a href="mailto:Izhaanali974@gmail.com" class="flex items-center gap-3 bg-white px-6 py-4 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition hover-lift">
                     <svg class="text-gray-900" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                         <polyline points="22,6 12,13 2,6"></polyline>
@@ -163,7 +258,7 @@
                         <p class="text-gray-900 font-semibold">Izhaanali974@gmail.com</p>
                     </div>
                 </a>
-             <a href="https://github.com/Izhaan974" target="_blank"
+                <a href="https://github.com/Izhaan974" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-white px-6 py-4 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition hover-lift">
                     <svg class="text-gray-900" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
@@ -185,7 +280,7 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8 px-6">
         <div class="max-w-6xl mx-auto text-center">
-            <p>© 2025 Izhaan Ali. All rights reserved.</p>
+            <p>© 2024 Izhaan Ali. All rights reserved.</p>
         </div>
     </footer>
 </body>
